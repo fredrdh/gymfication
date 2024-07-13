@@ -1,12 +1,12 @@
-class ChallengesDoneController < ApplicationController
+class ChallengeDonesController < ApplicationController
   def index
   end
 
   def new
-    @challenge_done = ChallengesDone.new
   end
 
   def create
+    raise
     @challenge_done = ChallengesDone.new(challenges_done_params)
     if @challenge_done.save
       redirect_to index, notice: "Pontos atribuídos!"

@@ -1,12 +1,13 @@
 class ChallengesController < ApplicationController
   def new
-    @challenge = Challenge.all
   end
 
   def create
   end
 
   def index
+    @challenge = Challenge.all
+    @challenge_done = ChallengeDone.new
   end
 
   def show
