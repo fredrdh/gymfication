@@ -19,20 +19,21 @@ Reward.destroy_all
 users = User.create!([
   { email: "user1@example.com", encrypted_password: "password1", first_name: "Roberto", last_name: "Barros", points: 100, admin: false },
   { email: "user2@example.com", encrypted_password: "password2", first_name: "Rafael", last_name: "Incao", points: 200, admin: false },
+  { email: "user3@example.com", encrypted_password: "password3", first_name: "", last_name: "Incao", points: 200, admin: false },
   { email: "admin@example.com", encrypted_password: "adminpassword", first_name: "Admin", last_name: "User", points: 300, admin: true }
 ])
 
 # Criar desafios
 challenges = Challenge.create!(
-  { title: "Assiduidade: faça um cliente cumprir seu treino 3 vezes na semana", points: 5 },
-  { title: "Avaliação Física: verifique a condição física e o progresso do cliente", points: 20 },
-  { title: "Feedback: receba um retorno positivo de um cliente", points: 10 },  
-  { title: "Convidar para Eventos: faça uma pessoa ir com seu convite no próximo evento (Máximo: otação do local) ", points: 5 },
-  { title: "Horários Diversos: faça o expediente na academia em horário alternativo", points: 20 },
-  { title: "Venda de Aulas: Venda uma matrícula de aula para um cliente:", points: 25 },
-  { title: "Encaminhe para um Personal Trainer: Venda uma matrícula de acompanhamento com um personal para um cliente:", points: 25 }, 
-  { title: "Encaminhe para um Nutricionista: Venda uma consulta com um nutricionista para um cliente:", points: 25 },
-  { title: "Venda de Suplementos: Venda de um pacote de suplementos", points: 20 },
+  { title: "Assiduidade: faça um cliente cumprir seu treino 3 vezes na semana", points: 5, price: 250 },
+  { title: "Avaliação Física: verifique a condição física e o progresso do cliente", points: 20, price: 100 },
+  { title: "Feedback: receba um retorno positivo de um cliente", points: 10, price: 0 },  
+  { title: "Convidar para Eventos: faça uma pessoa ir com seu convite no próximo evento (Máximo: lotação do local) ", points: 5, price: 0 },
+  { title: "Horários Diversos: faça o expediente na academia em horário alternativo", points: 20, price: 0 },
+  { title: "Venda de Aulas: Venda uma matrícula de aula para um cliente:", points: 25, price: 150 },
+  { title: "Encaminhe para um Personal Trainer: Venda uma matrícula de acompanhamento com um personal para um cliente:", points: 25, price: 300 }, 
+  { title: "Encaminhe para um Nutricionista: Venda uma consulta com um nutricionista para um cliente:", points: 25, price: 300 },
+  { title: "Venda de Suplementos: Venda de um pacote de suplementos", points: 20,  },
   { title: "Encaminhe para o SPA: Venda uma matrícula de SPA para um cliente:", points: 50 },
   { title: "Encaminhe para um Fisioterapeuta: Venda uma matrícula de Fisioterapia para um cliente:", points: 25 }, 
   { title: "Encaminhe para um Massagista: Venda uma consulta com um massagista para um cliente:", points: 25 },
@@ -53,7 +54,7 @@ challenges = Challenge.create!(
   { title: "Combo Vendas 14: Complete os desafios Venda de Aulas e Encaminhe para o SPA", points: 90 },
   { title: "Combo Vendas 15: Complete os desafios Venda de Aulas e Encaminha para um Massagista",  points: 90 },
   { title: "Combo Vendas 16: Complete os desafios Encaminhe para um Personal e Encaminhe para um Massagista", points: 90 },
-  { title: "Combo Vendas 17: Complete os desafios Venda de Suplementos e Venda de Aulas" points: 90 }, 
+  { title: "Combo Vendas 17: Complete os desafios Venda de Suplementos e Venda de Aulas", points: 90 }, 
   { title: "Combo Vendas 18: Complete os desafios Venda de Suplementos e Encaminhe para um Personal", points: 90 },
   { title: "Combo Vendas 19: Complete os desafios Encaminhe para um Massagista e Encaminhe para o SPA", points: 90 },
   { title: "Combo Vendas 20: Complete os desafios Encaminhe para um Personal e Encaminhe para o SPA", points: 90 },
