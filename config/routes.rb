@@ -1,29 +1,9 @@
 Rails.application.routes.draw do
-  get 'challenges_done/new'
-  get 'challenges_done/create'
-  get 'challenges_done/index'
-  get 'challenges_done/show'
-  get 'challenges_done/edit'
-  get 'challenges_done/update'
-  get 'challenges_done/destroy'
-  get 'rewards_given/new'
-  get 'rewards_given/create'
-  get 'rewards_given/index'
-  get 'rewards_given/destroy'
-  get 'rewards/new'
-  get 'rewards/create'
-  get 'rewards/index'
-  get 'rewards/show'
-  get 'rewards/edit'
-  get 'rewards/update'
-  get 'rewards/destroy'
-  get 'challenges/new'
-  get 'challenges/create'
-  get 'challenges/index'
-  get 'challenges/show'
-  get 'challenges/edit'
-  get 'challenges/update'
-  get 'challenges/destroy'
+  resources :challenges
+  resources :challenges_done
+  resources :rewards
+  resources :rewards_given
+
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
