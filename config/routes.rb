@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :challenges
-  resources :challenges_done
+  resources :challenge_dones
   resources :rewards
   resources :rewards_given
 
