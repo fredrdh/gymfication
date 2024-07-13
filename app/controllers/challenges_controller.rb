@@ -1,5 +1,6 @@
 class ChallengesController < ApplicationController
   def new
+    @challenge = Challenge.all
   end
 
   def create
@@ -19,4 +20,5 @@ class ChallengesController < ApplicationController
 
   def destroy
   end
+
 end
