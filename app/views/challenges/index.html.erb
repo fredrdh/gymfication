@@ -1,7 +1,8 @@
-<h1>Aprove pontos</h1>
-<p>Find me in app/views/challenges/index.html.erb</p>
-<%= simple_form_for @challenge_done do |f| %>
-  <%= f.input :user_id %>
-  <%= f.input :challenge_id %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container m-5 d-flex flex-column justify-content-center align-items-center">
+  <h1>Aprove pontos</h1>
+  <%= simple_form_for @challenge_done do |f| %>
+    <%= f.input :user_id, collection: @users.map { |user| [user.email, user.id] }, prompt: 'Selecione o funcionário', label:"Funcionário" %>
+    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: 'Selecione o desafio', label:"Desafio" %>
+    <%= f.button :submit, value: "Atribuir pontos!", class:"btn btn-primary w-100 rounded-4" %>
+  <% end %>
+</div>
