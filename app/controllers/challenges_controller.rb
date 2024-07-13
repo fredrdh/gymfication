@@ -8,6 +8,8 @@ class ChallengesController < ApplicationController
   end
 
   def index
+    @challenge = Challenge.all
+    @challenge_done = ChallengeDone.new
   end
 
   def show
@@ -21,4 +23,5 @@ class ChallengesController < ApplicationController
 
   def destroy
   end
+
 end

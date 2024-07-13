@@ -1,2 +1,7 @@
-<h1>Challenges#index</h1>
+<h1>Aprove pontos</h1>
 <p>Find me in app/views/challenges/index.html.erb</p>
+<%= simple_form_for @challenge_done do |f| %>
+  <%= f.input :user_id %>
+  <%= f.input :challenge_id %>
+  <%= f.button :submit %>
+<% end %>
