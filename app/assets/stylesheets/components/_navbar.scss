@@ -10,3 +10,14 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.nav-item a {
+  transition: 0.3s ease;
+  padding: 4px 0;
+}
+
+.nav-item a:hover {
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  padding: 4px 0;
+}

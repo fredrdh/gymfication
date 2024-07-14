@@ -1,2 +1,69 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<<<<<<< HEAD
+<!-- app/views/pages/home.html.erb -->
+<div class="container m-5 d-flex flex-column justify-content-center align-items-center">
+  <h1>Olá, <%= current_user.first_name %>!</h1>
+  <h3>Estes são os TOP 3 do mês</h3>
+  <ul class="list-group">
+    <% @top_users.each do |user| %>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <%= "#{user.first_name} #{user.last_name}" %>
+        <span class="badge badge-primary badge-pill text-dark"><%= user.total_points %> pontos</span>
+        <i class="fa-solid fa-star"></i>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class="mt-5">
+    <!-- Debug information -->
+    <canvas id="challengesChart" width="400" height="400"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  document.addEventListener('turbo:load', function() {
+    var labels_challenges = <%= raw @labels_challenges.to_json %>;
+    var data_challenges = <%= raw @data_challenges.to_json %>;
+
+    var ctx = document.getElementById('challengesChart').getContext('2d');
+    var challengesChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: labels_challenges,
+        datasets: [{
+          label: 'Desafios conquistados',
+          data: data_challenges,
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: true,
+            text: 'Desafios mais conquistados'
+          }
+        }
+      },
+    });
+  });
+</script>
