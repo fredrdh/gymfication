@@ -6,10 +6,9 @@ class ChallengeDonesController < ApplicationController
   end
 
   def create
-    raise
-    @challenge_done = ChallengesDone.new(challenges_done_params)
+    @challenge_done = ChallengeDone.new(challenge_done_params)
     if @challenge_done.save
-      redirect_to index, notice: "Pontos atribuídos!"
+      redirect_to challenges_path, notice: "Pontos atribuídos!"
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,7 +28,7 @@ class ChallengeDonesController < ApplicationController
 
   private
 
-  def challenges_done_params
-    params.require(:challenges_done).permit(:user_id, :challenge_id)
+  def challenge_done_params
+    params.require(:challenge_done).permit(:user_id, :challenge_id)
   end
 end

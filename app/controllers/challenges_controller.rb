@@ -8,7 +8,8 @@ class ChallengesController < ApplicationController
   end
 
   def index
-    @challenge = Challenge.all
+    @users = User.all
+    @challenges = Challenge.all
     @challenge_done = ChallengeDone.new
   end
 
