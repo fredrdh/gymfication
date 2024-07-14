@@ -17,10 +17,10 @@ Reward.destroy_all
 
 # Criar usuários
 users = User.create!([
-  { email: "user1@example.com", password: "password1", first_name: "Roberto", last_name: "Barros", points: 100, admin: false },
-  { email: "user2@example.com", password: "password2", first_name: "Rafael", last_name: "Incao", points: 200, admin: false },
-  { email: "user3@example.com", password: "password3", first_name: "", last_name: "Incao", points: 200, admin: false },
-  { email: "admin@example.com", password: "adminpassword", first_name: "Admin", last_name: "User", points: 300, admin: true }
+  { email: "robertobarros@gymfication.com", password: "123123", first_name: "Roberto", last_name: "Barros", points: 100, admin: false },
+  { email: "rafaelincao2@gymgication.com", password: "123123", first_name: "Rafael", last_name: "Incao", points: 200, admin: false },
+  { email: "r3@example.com", password: "123123", first_name: "", last_name: "Incao", points: 200, admin: false },
+  { email: "admin@gymfication.com", password: "123123", first_name: "Admin", last_name: "User", points: 300, admin: true }
 ])
 
 # Criar desafios
@@ -98,9 +98,16 @@ challenges = Challenge.create!([
 
 # Criar recompensas
 rewards = Reward.create!([
-  { title: "Gift Card", points: 150 },
-  { title: "Certificate", points: 100 },
-  { title: "Badge", points: 50 }
+  { title: "Pacote de Whey Protein e Camiseta", points: 50 },
+  { title: "Vale-Massagem", points: 150},
+  { title: "Consulta com Nutricionista", points: 300},
+  { title: "Equipamento de Ginastica", points: 300 },
+  { title: "Vale-presente", points: 150},
+  { title: "Folgas", points: 300},
+  { title: "Ingresso para Evento", points: 600},
+  { title: "Fone de Ouvidos", points: 300},
+  { title: "Cupom", points: 50 },
+  { title: "Viagem", points: 900}
 ])
 
 # Associar desafios completos aos usuários
