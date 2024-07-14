@@ -22,3 +22,54 @@
 .btn:hover{
   background-color: blue;
 }
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  border-radius: 10px;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+
+.homeBtn {
+  animation-name: shadow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shadow {
+  33% {
+    color: #FF0066;
+  }
+
+  66% {
+    color: #7030a0;
+  }
+
+  100% {
+    color: #00c6bb;
+  }
+}
+
+.homeBtn:hover {
+  text-shadow: 0px 0px 4px #777777;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
