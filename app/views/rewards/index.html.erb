@@ -1,2 +1,81 @@
-<h1>Rewards#index</h1>
-<p>Find me in app/views/rewards/index.html.erb</p>
+<div class="container d-flex justify-content-center flex-column mt-4 p-5">
+  <div class="row mt-5">
+    <div class="d-flex justify-content-between bg-warning">
+      <div class="card">
+        <p class="headingu">Prêmio:</p>
+        <p>Fones de Ouvidos</p>
+        <p>Gymfication</p>
+      </div>
+      <div class="card">
+        <p class="headingu">Prêmio:</p>
+        <p>Cupom</p>
+        <p>Gymfication</p>
+      </div>
+      <div class="card">
+        <p class="headingu">Prêmio:</p>
+        <p>Viagem</p>
+        <p>Gymfication</p>
+      </div>
+    </div>
+  <div>
+    <div class="row mt-5">
+    <div class="d-flex justify-content-between bg-secondary bg-gradient">
+      <div class="card">
+        <p class="headingu">Prêmio:</p>
+        <p>Equipamento de ginástica</p>
+        <p>Gymfication</p>
+      </div>
+      <div class="card">
+        <p class="headingu">Prêmio:</p>
+        <p>Folgas</p>
+        <p>Gymfication</p>
+      </div>
+      <div class="card">
+        <p class="headingu">Prêmio:</p>
+        <p>Ingresso para evento</p>
+        <p>Gymfication</p>
+      </div>
+    </div>
+  <div>
+    <div class="row mt-5">
+    <div class="d-flex justify-content-between">
+      <div class="card">
+        <p class="headingu">Prêmio:</p>
+        <p>Whey Protein e camiseta</p>
+        <p>Gymfication</p>
+      </div>
+      <div class="card">
+        <p class="headingu">Premio:</p>
+        <p>Vale-massagem</p>
+        <p>Gymfication</p>
+      </div>
+      <div class="card">
+        <p class="headingu">Premio:</p>
+        <p>Consulta Nutricional</p>
+        <p>Gymfication</p>
+      </div>
+    </div>
+  <div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Desafio</th>
+      <th scope="col">Pontuação</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @challenges.each do |challenge| %>
+    <tr>
+      <th scope="row">1</th>
+      <td><%=challenge.title%></td>
+      <td><%=challenge.points%></td>
+    </tr>
+      <% end %>
+
+  </tbody>
+</table>
