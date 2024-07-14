@@ -4,6 +4,19 @@ class PagesController < ApplicationController
   def home
     @total_sales = Challenge.joins(:challenge_dones).sum(:price)
 
+      # Grouping challenges done by user_id
+      challenges_done_per_user = current_user.challenge_dones.group(:user_id).pluck(:user_id, Arel.sql('array_agg(challenge_id)'))
+
+      # Fetch current user's email and challenge titles
+      @labels_challenges_done_per_user = {}
+      challenges_done_per_user.each do |user_id, challenge_ids|
+        challenges = Challenge.where(id: challenge_ids.flatten.uniq).pluck(:title)
+        @labels_challenges_done_per_user[current_user.email] = challenges
+      end
+
+      
+    @total_sales = Challenge.joins(:challenge_dones).sum(:price)
+
   @challenges_done_prices = Challenge.joins(:challenge_dones)
                                     .where('challenges.price > 0')
                                      .group(:id, :title)
