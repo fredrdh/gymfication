@@ -38,43 +38,6 @@ challenges = Challenge.create!([
   { title: "Encaminhe para um Fisioterapeuta: Venda uma matrícula de Fisioterapia para um cliente:", points: 25, price: 150 },
   { title: "Encaminhe para um Massagista: Venda uma consulta com um massagista para um cliente:", points: 25, price: 150 },
   { title: "Combo Wellness: Complete todos os desafios da trilha wellness uma vez:", points: 50, price: 350 },
-<<<<<<< HEAD
-  { title: "Combo Vendas 1: Complete os desafios Venda de Aulas e Encaminhe para um Personal", points: 90, price: 450 },
-  { title: "Combo Vendas 2: Complete os desafios Encaminhe para um Nutricionista e Venda de Suplementos", points: 90, price: 450 },
-  { title: "Combo Vendas 3: Complete os desafios Encaminhe para o SPA e Encaminhe para um Fisioterapeuta", points: 90, price: 850 },
-  { title: "Combo Vendas 4: Complete os desafios Encaminhe para um Massagista e Venda de Suplementos", points: 90, price: 300 },
-  { title: "Combo Vendas 5: Complete os desafios Encaminhe para um Nutricionista e Encaminhe para o SPA", points: 90, price: 1000 },
-  { title: "Combo Vendas 6: Complete os desafios Encaminhe para um Fisioterapeuta e Encaminhe para um Massagista", points: 90, price: 300 },
-  { title: "Combo Vendas 7: Complete os desafios Venda de Suplementos e Encaminhe para um Fisioterapeuta", points: 90, price: 300 },
-  { title: "Combo Vendas 8: Complete os desafios Encaminhe para um Nutricionista e Encaminhe para um Massagista", points: 90, price: 450 },
-  { title: "Combo Vendas 9: Complete os desafios Venda de Aulas e Encaminhe para um Nutricionista", points: 90, price: 450 },
-  { title: "Combo Vendas 10: Complete os desafios Venda de Aulas e Encaminhe para um Fisioterapeuta", points: 90, price: 300 },
-  { title: "Combo Vendas 11: Complete os desafios Encaminhe para um Nutricionista e Encaminhe para um Personal", points: 90, price: 600 },
-  { title: "Combo Vendas 12: Complete os desafios Encaminhe para um SPA e Encaminhe para um Fisioterapeuta", points: 90, price: 850 },
-  { title: "Combo Vendas 13: Complete os desafios Encaminhe para um Nutricionista e Encaminhe para um Fisioterapeuta", points: 90, price: 450 },
-  { title: "Combo Vendas 14: Complete os desafios Venda de Aulas e Encaminhe para o SPA", points: 90, price: 850 },
-  { title: "Combo Vendas 15: Complete os desafios Venda de Aulas e Encaminha para um Massagista", points: 90, price: 300 },
-  { title: "Combo Vendas 16: Complete os desafios Encaminhe para um Personal e Encaminhe para um Massagista", points: 90, price: 450 },
-  { title: "Combo Vendas 17: Complete os desafios Venda de Suplementos e Venda de Aulas", points: 90, price: 300 },
-  { title: "Combo Vendas 18: Complete os desafios Venda de Suplementos e Encaminhe para um Personal", points: 90, price: 450 },
-  { title: "Combo Vendas 19: Complete os desafios Encaminhe para um Massagista e Encaminhe para o SPA", points: 90, price: 850 },
-  { title: "Combo Vendas 20: Complete os desafios Encaminhe para um Personal e Encaminhe para o SPA", points: 90, price: 1000 },
-  { title: "Combo Vendas 21: Complete os desafios Encaminhe para um Personal e Venda de Suplementos", points: 90, price: 450 },
-  { title: "Combo Vendas 22: Complete os desafios Venda de Aulas, Encaminhe para um Personal e Encaminhe para um Nutricionista", points: 130, price: 600 },
-  { title: "Combo Vendas 23: Complete os desafios Venda de Aulas, Venda de Suplementos e Encaminhe para o SPA", points: 130, price: 850 },
-  { title: "Combo Vendas 24: Complete os desafios Venda de Aulas, Encaminhe para um Fisioterapeuta e Encaminhe para um Massagista", points: 130, price: 300 },
-  { title: "Combo Vendas 25: Complete os desafios Encaminhe para um Personal, Encaminhe para um Nutricionista e Venda de Suplementos", points: 130, price: 450 },
-  { title: "Combo Vendas 26: Complete os desafios Encaminhe para um Personal, Encaminhe para o SPA e Encaminhe para um Fisioterapeuta", points: 130, price: },
-  { title: "Combo Vendas 27: Complete os desafios Encaminhe para um Personal, Encaminhe para um Massagista e Encaminhe para um Nutricionista", points: 130 },
-  { title: "Combo Vendas 28: Complete os desafios Encaminhe para um Nutricionista, Venda de Suplementos e Encaminhe para o SPA", points: 130 },
-  { title: "Combo Vendas 29: Complete os desafios Encaminhe para um Nutricionista, Encaminhe para um Fisioterapeuta e Encaminhe para um Massagista", points: 130 },
-  { title: "Combo Vendas 30: Complete os desafios Venda de Suplementos, Encaminhe para o SPA e Encaminhe para um Fisioterapeuta", points: 130 },
-  { title: "Combo Vendas 31: Complete os desafios Venda de Suplementos, Encaminhe para um Massagista e Encaminhe para um Personal", points: 130 },
-  { title: "Combo Vendas 32: Complete os desafios Encaminhe para o SPA, Encaminhe para um Fisioterapeuta e Encaminhe para um Nutricionista", points: 130 },
-  { title: "Combo Vendas 33: Complete os desafios Encaminhe para o SPA, Encaminhe para um Massagista e Venda de Suplementos", points: 130 },
-  { title: "Combo Vendas 34: Complete os desafios Encaminhe para um Fisioterapeuta, Encaminhe para um Massagista e Venda de Aulas", points: 130 }
-)
-=======
   { title: "Combo Vendas 1: Complete os desafios Venda de Aulas e Encaminhe para um Personal Trainer", points: 90, price: 450 },
   { title: "Combo Vendas 2: Complete os desafios Venda de Aulas e Venda de Suplementos", points: 90, price: 300 },
   { title: "Combo Vendas 3: Complete os desafios Venda de Aulas e Encaminhe para um Nutricionista", points: 90, price: 450 },
@@ -132,7 +95,6 @@ challenges = Challenge.create!([
   { title: "Combo Vendas 55: Complete os desafios Venda de Suplementos, Encaminhe para um Fisioterapeuta e Encaminhe para um Massagista", points: 125, price: 600 },
   { title: "Combo Vendas 56: Complete os desafios Encaminhe para o SPA, Encaminhe para um Fisioterapeuta e Encaminhe para um Massagista", points: 125, price: 1150 }
 ])
->>>>>>> main
 
 # Criar recompensas
 rewards = Reward.create!([
