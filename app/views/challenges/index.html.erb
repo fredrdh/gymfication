@@ -1,86 +1,149 @@
-<div class="container m-5 d-flex flex-column justify-content-center align-items-center">
-  <h1>Aprove Pontos</h1>
-  <%= simple_form_for @challenge_done do |f| %>
-    <%= f.input :user_id, collection: @users.map { |user| [user.email, user.id] }, prompt: 'Selecione o funcionário', label:"Funcionário" %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: 'Selecione o desafio', label:"Desafio" %>
-    <%= f.button :submit, value: "Atribuir pontos!", class:"btn btn-primary w-100 rounded-4" %>
-  <% end %>
+<div class="container mt-5 d-flex flex-row justify-content-between">
+  <div class="flex-column w-50">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h1 class="card-title">Aprove Pontos</h1>
+        <%= simple_form_for @challenge_done do |f| %>
+          <%= f.input :user_id, collection: @users.map { |user| [user.email, user.id] }, prompt: 'Selecione o funcionário', label:"Funcionário", class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: 'Selecione o desafio', label:"Desafio", class: "form-control" %>
+          <%= f.button :submit, value: "Atribuir pontos!", class:"btn btn-primary btn-block mt-3 w-100 rounded-4" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h1 class="card-title">Crie um Desafio</h1>
+        <%= simple_form_for @challenge_done do |f| %>
+          <%= f.input :user_id, collection: @users.map { |user| [user.email, user.id] }, prompt: '', label:"Nome do Desafio", class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Pontos', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Preço', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha', class: "form-control" %>
+          <%= f.button :submit, value: "Criar Desafio!", class:"btn btn-primary btn-block mt-3 w-100 rounded-4" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h1 class="card-title">Edite um Desafio</h1>
+        <%= simple_form_for @challenge_done do |f| %>
+          <%= f.input :user_id, collection: @users.map { |user| [user.email, user.id] }, prompt: '', label:"Nome do Desafio", class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Pontos', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Preço', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha', class: "form-control" %>
+          <%= f.button :submit, value: "Editar Desafio!", class:"btn btn-primary btn-block mt-3 w-100 rounded-4" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h1 class="card-title">Crie um Prêmio</h1>
+        <%= simple_form_for @challenge_done do |f| %>
+          <%= f.input :user_id, collection: @users.map { |user| [user.email, user.id] }, prompt: '', label:"Nome do Prêmio", class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Pontos', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Custo', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Quantidade', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha', class: "form-control" %>
+          <%= f.button :submit, value: "Criar Prêmio!", class:"btn btn-primary btn-block mt-3 w-100 rounded-4" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h1 class="card-title">Edite um Prêmio</h1>
+        <%= simple_form_for @challenge_done do |f| %>
+          <%= f.input :user_id, collection: @users.map { |user| [user.email, user.id] }, prompt: '', label:"Nome do Prêmio", class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Pontos', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Custo', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Quantidade', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha', class: "form-control" %>
+          <%= f.button :submit, value: "Editar Prêmio!", class:"btn btn-primary btn-block mt-3 w-100 rounded-4" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h1 class="card-title">Edite o Pódio</h1>
+        <%= simple_form_for @challenge_done do |f| %>
+          <%= f.input :user_id, collection: @users.map { |user| [user.email, user.id] }, prompt: '', label:"Nome do Prêmio", class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 1', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 1', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 1', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 2', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 1', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 3', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 2', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 1', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 2', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 2', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 2', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 3', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 3', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 1', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 3', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 2', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 3', class: "form-control" %>
+          <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 3', class: "form-control" %>
+          <%= f.button :submit, value: "Editar Pódio!", class:"btn btn-primary btn-block mt-3 w-100 rounded-4" %>
+        <% end %>
+      </div>
+    </div>
+ </div>
+<div class="flex-column ms-3">
+<div class="total-sales-container">
+  <h2 class="display-6">Faturamento do mês: R<%= number_to_currency(@total_sales) %></h2>
+</div>
+<div class="chart-container">
+  <canvas id="salesChart" width="400" height="400"></canvas>
 </div>
 
-<div class="container m-5 d-flex flex-column justify-content-center align-items-center">
-  <h1>Crie um Desafio</h1>
-  <%= simple_form_for @challenge_done do |f| %>
-    <%= f.input :user_id, collection: @users.map { |user| [user.email, user.id] }, prompt: '', label:"Nome do Deafio" %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Pontos' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Preço' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha' %>
-    <%= f.button :submit, value: "Criar Desafio!", class:"btn btn-primary w-100 rounded-4" %>
-  <% end %>
 </div>
 
-<div class="container m-5 d-flex flex-column justify-content-center align-items-center">
-  <h1>Edite um Desafio</h1>
-  <%= simple_form_for @challenge_done do |f| %>
-    <%= f.input :user_id, collection: @users.map { |user| [user.email, user.id] }, prompt: '', label:"Nome do Deafio" %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Pontos' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Preço' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha' %>
-    <%= f.button :submit, value: "Criar Desafio!", class:"btn btn-primary w-100 rounded-4" %>
-  <% end %>
-</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  document.addEventListener('turbo:load', function() {
+    var labels_sales = <%= raw @labels_sales.to_json %>;
+    var data_sales = <%= raw @data_sales.to_json %>;
 
-<div class="container m-5 d-flex flex-column justify-content-center align-items-center">
-  <h1>Crie um Prêmio</h1>
-  <%= simple_form_for @challenge_done do |f| %>
-    <%= f.input :user_id, collection: @users.map { |user| [user.email, user.id] }, prompt: '', label:"Nome do Prêmio" %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Pontos' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Custo' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Quantidade' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha' %>
-    <%= f.button :submit, value: "Criar Prêmio!", class:"btn btn-primary w-100 rounded-4" %>
-  <% end %>
-</div>
+    var ctx2 = document.getElementById('salesChart').getContext('2d');
+    var salesChart = new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: labels_sales,
+        datasets: [{
+          label: 'Sales Amount',
+          data: data_sales,
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false, // Hide legend for this chart
+          },
+          title: {
+            display: true,
+            text: 'Faturamento total por desafio'
+          }
+        },
+        scales: {
+          x: {
+            display: false, // Hide x-axis labels
+          },
+          y: {
+            beginAtZero: true
+          }
+        }
+      },
+    });
+  });
+</script>
 
-<div class="container m-5 d-flex flex-column justify-content-center align-items-center">
-  <h1>Edite um Prêmio</h1>
-  <%= simple_form_for @challenge_done do |f| %>
-    <%= f.input :user_id, collection: @users.map { |user| [user.email, user.id] }, prompt: '', label:"Nome do Prêmio" %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Pontos' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Custo' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Quantidade' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha' %>
-    <%= f.button :submit, value: "Criar Prêmio!", class:"btn btn-primary w-100 rounded-4" %>
-  <% end %>
-</div>
-
-<div class="container m-5 d-flex flex-column justify-content-center align-items-center">
-  <h1>Edite o Pódio</h1>
-  <%= simple_form_for @challenge_done do |f| %>
-    <%= f.input :user_id, collection: @users.map { |user| [user.email, user.id] }, prompt: '', label:"Nome do Prêmio" %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 1' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 1' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 1' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 2' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 1' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 3' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 2' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 1' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 2' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 2' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 2' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 3' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 3' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 1' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 3' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 2' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 3' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 3' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 3' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 1' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 3' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 2' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Trilha 3' %>
-    <%= f.input :challenge_id, collection: @challenges.map { |challenge| [challenge.title, challenge.id] }, prompt: '', label:'Prêmio 3' %>
-    <%= f.button :submit, value: "Criar Prêmio!", class:"btn btn-primary w-100 rounded-4" %>
-  <% end %>
 </div>
