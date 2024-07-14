@@ -100,13 +100,13 @@ challenges = Challenge.create!([
 rewards = Reward.create!([
   { title: "Pacote de Whey Protein e Camiseta", points: 50 },
   { title: "Vale-Massagem", points: 150},
-  { title: "Consulta com Nutricionista", points: 300},
-  { title: "Equipamento de Ginastica", points: 300 },
-  { title: "Vale-presente", points: 150},
+  { title: "Consulta Nutricional", points: 300},
+  # { title: "Equipamento de Ginastica", points: 300 },
+  { title: "Equipamento de Ginastica", points: 150},
   { title: "Folgas", points: 300},
   { title: "Ingresso para Evento", points: 600},
   { title: "Fone de Ouvidos", points: 300},
-  { title: "Cupom", points: 50 },
+  { title: "Cupom", points: 600 },
   { title: "Viagem", points: 900}
 ])
 
