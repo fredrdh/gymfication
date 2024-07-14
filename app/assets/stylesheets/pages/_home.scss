@@ -1,1 +1,24 @@
 // Specific CSS for your home-page
+.tree {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.stone {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  margin: 2px;
+  background-color: #ccc;
+  display: inline-block;
+  position: absolute;
+}
+
+.btn:hover{
+  background-color: blue;
+}
