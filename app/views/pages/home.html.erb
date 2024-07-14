@@ -1,7 +1,10 @@
-<<<<<<< HEAD
 <!-- app/views/pages/home.html.erb -->
 <div class="container m-5 d-flex flex-column justify-content-center align-items-center">
+  <% if user_signed_in? %>
   <h1>Olá, <%= current_user.first_name %>!</h1>
+  <% else %>
+  <h1>Olá, Visitante!</h1>
+  <% end %>
   <h3>Estes são os TOP 3 do mês</h3>
   <ul class="list-group">
     <% @top_users.each do |user| %>
