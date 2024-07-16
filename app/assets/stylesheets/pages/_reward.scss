@@ -1,0 +1,94 @@
+.cardx {
+  position: relative;
+  width: 170px;
+  height: 224px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.cardx::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: 180px;
+  height: 234px;
+  border-radius: 15px;
+  background: linear-gradient(-45deg, #1cc2ff 0%, #ff261b 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cardx::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #1cffa4 0%, #ff01aee6 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(40px);
+}
+
+.headingu {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.cardx p:not(.heading) {
+  font-size: 20px;
+  color: #000000;
+}
+
+.cardx p:not::after {
+  font-size: 0px;
+  color: #ffffff;
+}
+
+.cardx p:last-child {
+  color: #ffffff;
+}
+
+.cardx:hover::after {
+  filter: blur(50px);
+}
+
+.cardx:hover::before {
+  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
+
+.cardx:hover {
+  transform: scale(1);
+}
+
+.avatar {
+  position: fixed;
+  width: 140px;
+  height: 140px;
+  right: 70px;
+  top: 100px;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.row-gold {
+  background-color: #Ffd700;
+  border-radius: 20px;
+}
+
+.row-silver {
+  background-color: #C0c0c0;
+}
+
+.row-bronze {
+  background-color: #Cd7f32;
+}

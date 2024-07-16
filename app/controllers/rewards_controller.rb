@@ -15,6 +15,7 @@ class RewardsController < ApplicationController
   end
   def index
     @rewards = Reward.all
+    @challenges = Challenge.all
   end
 
   def show

@@ -1,6 +1,9 @@
 import { Application } from "@hotwired/stimulus"
 
+
 const application = Application.start()
+
+
 
 // Configure Stimulus development experience
 application.debug = false
@@ -8,13 +11,16 @@ window.Stimulus   = application
 
 export { application }
 
+// Connects to data-controller="popup"
 document.addEventListener('DOMContentLoaded', (event) => {
-  const stones = document.querySelectorAll('.stone');
-  stones.forEach(stone => {
-    stone.addEventListener('click', (event) => {
-      const currentStone = event.currentTarget;
-      console.log(currentStone); // Exibe o elemento clicado no console
-      currentStone.style.backgroundColor = currentStone.style.backgroundColor === 'blue' ? '#ccc' : 'blue';
+  const levels = document.querySelectorAll('.level');
+  levels.forEach(level => {
+    const card = level.querySelector('.card');
+    level.addEventListener('mouseover', () => {
+      card.classList.add('flipped');
+    });
+    level.addEventListener('mouseout', () => {
+      card.classList.remove('flipped');
     });
   });
 });
